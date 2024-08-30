@@ -1,0 +1,219 @@
+.ScheduleImg{
+    width: 50%;
+    height: auto;
+    cursor: pointer;
+    transition: .2s linear;
+}
+.ScheduleImg:hover{
+    transform: scale(1.1);
+}
+.Schedule{
+    position: relative;
+    left: -20%;
+    padding: 0%;
+    margin-bottom:5%;
+}
+.Shedule h4{
+    text-align: left;
+}
+.captions{
+    background-image: linear-gradient(to right, rgba(235, 235, 235, 0.75) 27%, rgba(255, 255, 255, 0.805));
+    font-size: 150%;
+    position: relative;
+    width: 50%;
+    height: auto;
+    right:-25%;
+    border-radius: 20px;
+    border:4px solid;
+}
+.downloadBtn{
+    cursor: pointer;
+    background-color: orange;
+    border-radius: 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 200%;
+    padding: .5%;
+    border: 2px solid;
+    border-color: black;
+}
+.subHeading{
+    text-align: left;
+    position: relative;
+    left:5%;
+    font-size: 180%;
+}
+.mainBtn{
+    font-size: 200%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    /*text-decoration: underline;*/
+    color: rgb(0, 64, 191);
+    font-weight: bolder;
+    cursor: pointer;
+    transition: .1s linear;
+}
+.mainBtn:hover{
+    transform: scale(1.15)
+}
+.navBtn{
+    position: relative;
+    margin-bottom: 10%;
+    display: flex;
+    text-align: center;
+    font-size: 150%;
+    padding:5%;
+    background-color: rgb(255, 222, 222);
+    border:3px solid;
+    border-radius: 50px;
+    box-shadow: none;
+    cursor: pointer;
+    transition: .1s linear;
+}
+@media(max-width: 600px){
+    .navBtn{
+        font-size: 60%;
+        position: relative;
+    }
+    .mainBtn{
+        font-size: 100%;
+    }
+    .Schedule{
+        width:150%;
+        left:-35%;
+    }
+    .captions{
+        font-size: 100%;
+        width:30%;
+        margin-left:6%;
+    }
+    .downloadBtn{
+        font-size:100%;
+    }
+    .download-text{
+        font-size: 70%;
+    }
+    #scheduleNav{
+        position: relative;
+    }
+    #popup-img{
+        width:300px;
+    }
+}
+.navBtn:hover{
+    background-color: rgb(235, 202, 202);;
+}
+.navBtn:active{
+    transform: scale(.9)
+}
+.popup-image{
+    position: fixed;
+    top:0; left: 0;
+    background: rgba(0,0,0,.9);
+    height:100%;
+    width: 100%;
+    z-index: 101;
+    display:none;
+}
+.popup-image span{
+    position:absolute;
+    top: 0; right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    z-index: 101;
+}
+@media(max-width: 768px){
+    #popup-img{
+        width: 300px;
+    }
+}
+.download-text{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+.download-text h4{
+    opacity: 0.71;
+}
+#buttonContainer{
+    display:  flex;
+    justify-content: center;
+    gap: 7%;
+}
+#popup-img{
+    position: absolute;
+    top: 50%; left:50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid white;
+    border-radius: 5px;
+    width: 700px;
+    object-fit:cover;
+    cursor: zoom-in;
+}
+#webTitle{
+    background-image: linear-gradient(to bottom, rgba(235, 235, 235, 0.75) 27%, rgba(255, 255, 255, 0)150%);
+    background-repeat: no-repeat;
+    width:100%;
+}
+#webContainer{
+    text-align: center;
+    background-image: linear-gradient(to bottom, rgb(174, 255, 255)50%, rgb(148, 255, 148));
+    overflow: hidden;
+}
+#scheduleNav{
+    align-items: right;
+    text-align: right;
+    position: absolute;
+    z-index: 99;
+    left:100;
+    right:0;
+    animation: nba 1s normal;
+    background-color: darkblue;
+    border-radius: 15px;
+    padding:10px;
+    margin-right:2%;
+}
+#backToTop{
+    position: fixed;
+    width: 60px;
+    height:60px;
+    top:0;
+    right:0;
+    margin:2%;
+    z-index: 100;
+    background-color: rgb(255, 129, 129);
+    border: 3px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .1s linear;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
+#backToTop:hover{
+    transform: scale(1.1);
+}
+#backToTop:active{
+    transform: scale(0.9);
+}
+@keyframes nba {
+    0%{transform: translate(0, 200%);}
+    50%{transform: translate(0, -10%);}
+    100%{transform: translate(0, 0);}
+}
+a{
+    text-decoration: none;
+}
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: none;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  

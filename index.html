@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Hut</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="webContainer">
+    <div id="webTitle">
+        <a href="index.html"><img src="Website New Logo v3.png" style="width: 10%; position: relative; top:25px;"></a>
+        <h2 id="marketingSubtitle">The Best Website To Get Time Saving Schedules</h2>
+
+    <div id="buttonContainer">
+    <a href="index.html"><button id="homeBtn" class="mainBtn">Home</button></a>
+    <a href="Lists.html"><button id="listsBtn" class="mainBtn">Schedules</button></a>
+    <a href="About.html"><button id="aboutBtn" class="mainBtn">About us</button></a>
+    </div>
+    </div>
+    <h1 id="exampleHook"style="width:60%; margin-left: 20%;">Ever Need a helping hand in managing your time? You've come to the right place</h1>
+    <img id="A-Basic-Daily-Checklist-with-Color" class="ScheduleImg" src="Pictures/Schedules/Daily Schedules/A Basic Daily Checklist .png">
+    <div class="download-text">
+        <h4>Download png file</h4>
+        <h4>Download excel file</h4>
+        </div>
+        <a href="Pictures/Schedules/Daily Schedules/A Basic Daily Checklist .png" download="A Basic Daily Checklist"class="downloadBtn">Download</a>
+        <a href="Pictures/Schedules/Daily Schedules/A Basic Daily Checklist.xlsx" download="A Basic Daily Checklist"class="downloadBtn">Download</a>
+        <div><a href="Lists.html"><button style="margin-top: 20px;" class="mainBtn">Let's Go!</button></a></div>
+    <h2 id="variety">Here you could DOWNLOAD one of many schedules, FOR FREE, like the one above, color or colorless!</h2>
+    <h2 id="anyformat" style="margin-top: 0;">Whether you like it in png or excel form, it's  all here!</h2>
+    </div>
+<style>
+#exampleHook{
+    font-size: 200%;
+    color:rgb(66, 66, 66);
+    animation: fade .5s linear;
+}
+#A-Basic-Daily-Checklist-with-Color{
+    width: 30%;
+    margin: 2%;
+}
+#variety{
+    font-size: 200%;
+    width:60%; 
+    margin-left: 20%; 
+    margin-bottom: 0;
+}
+@media(max-width: 600px){
+    #exampleHook{
+    font-size: 100%;
+    }
+    #A-Basic-Daily-Checklist-with-Color{
+        width:50%;
+    }
+    #variety{
+        font-size: 100%;
+    }
+    #anyformat{
+    font-size: 75%;
+}
+}
+@keyframes fade {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+#eximg{
+    animation: fromside .5s linear;
+}
+@keyframes fromside {
+    0%{transform: translate(-300%,0);}
+    100%{transform: translate(0,0);}
+}
+#variety{
+    animation:float .5s linear;
+}
+@keyframes float {
+    0%{transform: translate(0,300%);}
+    100%{transform: translate(0,0);}
+}
+</style>
+<div class="popup-image">
+    <span>&times;</span>
+    <img onclick="zoom(this)" id="popup-img" src="Pictures/Schedules/Daily Schedules/Priority Based Daily Schedule.png">
+</div>
+<script>
+    const popup = document.querySelector(".popup-image");
+    const simg11 = document.getElementById("A-Basic-Daily-Checklist-with-Color");
+    let windowWidth = window.innerWidth;
+    check();
+function check(){
+if(windowWidth > 600){
+    document.getElementById("popup-img").style.width = '700px';
+}
+else{
+    document.getElementById("popup-img").style.width = '300px';
+}
+}
+    simg11.onclick = (()=>{
+        check();
+        popup.style.display = 'block';
+        document.querySelector("#popup-img").src = simg11.getAttribute('src');
+    });
+    let zoomValue = 100; 
+window.addEventListener("keydown", closepopup)
+function closepopup(event){
+    key_pressed = event.key;
+    if(key_pressed == "Escape"){
+        popup.style.display = 'none';
+        zoomValue = 100;
+        document.getElementById("popup-img").style.width = '700px';
+    }
+}
+document.querySelector(".popup-image span").onclick = () =>{
+    popup.style.display = 'none';
+    zoomValue = 100;
+    document.getElementById("popup-img").style.width = '700px';
+};
+
+function zoom(element){
+    if(windowWidth > 600){
+    if(zoomValue == 100){
+        element.style.width = '800px';
+        zoomValue += 20;
+    }
+    else if(zoomValue == 120){
+        element.style.width = '900px';
+        zoomValue += 20;
+    }
+    else if(zoomValue == 140){
+        element.style.width = '1000px';
+        zoomValue += 20;
+    }
+    else if(zoomValue == 160){
+        element.style.width = '1100px';
+        zoomValue += 20;
+    }
+    else if(zoomValue == 180){
+        element.style.width = '1200px';
+        element.style.cursor = 'zoom-out';
+        zoomValue += 20;
+    }
+    else if(zoomValue == 200){
+        element.style.width = '700px';
+        element.style.cursor = 'zoom-in';
+        zoomValue -= 100;
+    }
+}
+else{
+    if(zoomValue == 100){
+        element.style.width = '400px';
+        zoomValue += 20;
+    }
+    else if(zoomValue == 120){
+        element.style.width = '500px';
+        zoomValue += 20;
+    }
+    else if(zoomValue == 140){
+        element.style.width = '600px';
+        zoomValue += 20;
+    }
+    else if(zoomValue == 160){
+        element.style.width = '700px';
+        zoomValue += 20;
+    }
+    else if(zoomValue == 180){
+        element.style.width = '800px';
+        element.style.cursor = 'zoom-out';
+        zoomValue += 20;
+    }
+    else if(zoomValue == 200){
+        element.style.width = '300px';
+        element.style.cursor = 'zoom-in';
+        zoomValue -= 100;
+    }
+}
+}
+    </script>
+</body>
+</html>
